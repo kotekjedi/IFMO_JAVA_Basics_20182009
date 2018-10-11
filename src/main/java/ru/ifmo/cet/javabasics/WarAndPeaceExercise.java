@@ -1,6 +1,5 @@
 package ru.ifmo.cet.javabasics;
 
-import jdk.nashorn.api.tree.Tree;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
