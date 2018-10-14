@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Stream;
+
 
 
 public class WarAndPeaceExercise {
@@ -29,12 +29,12 @@ public class WarAndPeaceExercise {
                 .filter(s->s.length()>3)
                 .forEach(s->{dict.put(s, dict.getOrDefault(s, 0) + 1);});
 
-        ArrayList<String> ss = new ArrayList<>();
+
 
 
         List <Map.Entry<String, Integer>> list =
                 new ArrayList<Map.Entry<String, Integer>>();
-        dict.entrySet().stream().filter(pair -> pair.getValue() >= 10).forEach(s->{list.add(s);});
+        dict.entrySet().stream().filter(pair -> pair.getValue() >= 10).forEach(list::add);
         Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
             @Override
             public int compare(Map.Entry<String, Integer> a, Map.Entry<String, Integer> b) {
@@ -44,8 +44,8 @@ public class WarAndPeaceExercise {
         });
 
         StringBuilder b = new StringBuilder();
-        int c=0;
-        list.forEach(s->b.append((String)s.getKey()+" - "+s.getValue()+"\n"));
+
+        list.forEach(s-> b.append((String) s.getKey()).append(" - ").append(s.getValue()).append("\n"));
 
 
         b.deleteCharAt(b.length()-1);
