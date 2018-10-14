@@ -1,8 +1,5 @@
 package ru.ifmo.cet.javabasics;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Нужно реализовать констурктор и метод, возвращающий слова песни про бутылки на стене.
  * <p>
@@ -38,7 +35,7 @@ public class BottleSong {
     private int bottles;
 
 
-    public BottleSong(int bottleTakenAtOnce) {
+    BottleSong(int bottleTakenAtOnce) {
         //TODO
          if (bottleTakenAtOnce<100 && bottleTakenAtOnce>0) {bottles=bottleTakenAtOnce;}
     }
@@ -54,7 +51,7 @@ public class BottleSong {
         String [] ones = {"","one ","two ","three ","four ","five ","six ","seven ","eight ","nine ","ten "};
         String [] ones1 = {"","one","two","three","four","fif","six","seven","eight","nine","ten"};
         String [] tens = {"","teen ","twenty ","thirty ","forty ","fifty ","sixty ","seventy ","eighty ","ninety ","hundred"};
-        String spelling = null;
+        String spelling;
         String wall = " bottles of beer on the wall, ";
         String part = " bottles of beer on the wall.\n";
         if(bottles > 19){
